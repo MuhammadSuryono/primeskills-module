@@ -67,4 +67,12 @@ class PrimeskillsException extends RuntimeException implements HttpExceptionInte
         return $this->headers;
     }
 
+    /**
+     * @return array|mixed
+     */
+    public function getData()
+    {
+        return $this->data;
+    }
+
 }
