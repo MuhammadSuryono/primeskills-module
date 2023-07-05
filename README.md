@@ -24,10 +24,13 @@ Add this line inside repositories in `composer.json` file and run command `compo
         }
     ]
 }
+
 ```
 ---
 ### 1. Middleware integrate with core Petra Service
-Add `'token.auth' => EnsureTokenValid::class` in `App\Http\Kernel` inside `$routeMiddleware`
+Add `'token.auth' => EnsureTokenValid::class` in `App\Http\Kernel` inside `$routeMiddleware`.
+This middleware use Redis for save last token, you must setup in composer json for redis with `composer install "predis/predis"` and then you can set for `REDIS_CLIENT` in config/database 
+`'client' => env('REDIS_CLIENT', 'predis')`
 
 ### 2. General exception handle
 Set exception general response in exceptions Handler Class.

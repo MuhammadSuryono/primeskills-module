@@ -20,5 +20,6 @@ Route::get('/', function () {
 });
 
 Route::get('/exception', function () {
-    throw new PrimeskillsException(500, "Error");
+    request()->validate(['str' => 'required']);
+    throw new PrimeskillsException(500, "Error", ["ERRR" => "E"]);
 });
