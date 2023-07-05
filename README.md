@@ -14,14 +14,15 @@ Laravel Package For general project laravel
 Add this line inside repositories in `composer.json` file and run command `composer update`
 ```json
 {
-    ...
+    "require": {
+        "primeskills/web": "^1.3.0"
+    },
     "repositories": [
         {
             "type": "vcs",
             "url": "https://github.com/MuhammadSuryono/primeskills-module"
         }
-    ],
-    ...
+    ]
 }
 ```
 ---
